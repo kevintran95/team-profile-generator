@@ -40,3 +40,24 @@ const addManager = () => {
         console.log(manager)
     })
 };
+
+const addEmployee = () => {
+    return inquirer.prompt ([
+        {
+            type:'list',
+            name:'role',
+            message:'Please choose your employees position',
+            choices:['Engineer', 'Intern']
+        },
+        {
+            type:'input',
+            name:'name',
+            message:'What is the name of the employee?',
+        },
+        {
+            type:'input',
+            name:'id',
+            message:'Enter the employees ID',
+        }
+    ])
+}
