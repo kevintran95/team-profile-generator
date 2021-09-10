@@ -58,6 +58,47 @@ const addEmployee = () => {
             type:'input',
             name:'id',
             message:'Enter the employees ID',
+        },
+        {
+            type:'input',
+            name:'email',
+            message:'Enter the employees email address',
+        },
+        {
+            type: 'input',
+            name:'github',
+            message:'Enter the employees github username',
+            when: (input) => input.role === "Engineer",
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'Enter the interns school',
+            when: (input) => input.role === "Inter",
+        },
+        {
+            type:'confirm',
+            name:'confirmAddEmployee',
+            message:'I dont want to add anymore team members',
+            default: false
         }
     ])
-}
+    .then(employeeData => {
+        let {name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+        let employee;
+        if (role === "Engineer") {
+            employee = new Engineer (name, id, email, github);
+            console.log(employee);
+        }else if (role === "Intern") {
+            employee = new Intern (name, id, email, school);
+            console.log(employee);
+        }
+        teamArray.push(employee);
+
+        if (confirmAddEmployee) {
+            return addEmployee(teamArray);
+        } else {
+            return teamArray;
+        }
+    })
+};
