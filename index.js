@@ -6,8 +6,10 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+const teamArray = [];
+
 // Manager questions
-const managerInput = () => {
+const addManager = () => {
     return inquirer.prompt ([
         {
             type: 'input',
@@ -30,4 +32,11 @@ const managerInput = () => {
             message: 'What is your team managers office number?',
         }
     ])
-}
+    .then(managerInput => {
+        const {name, id, email, officeNumber} = managerInput;
+        const manager = new Manager (name, id, email, officeNumber);
+
+        teamArray.push(manager);
+        console.log(manager)
+    })
+};
