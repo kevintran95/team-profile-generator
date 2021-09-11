@@ -5,6 +5,7 @@ const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const generateHTML = require('./src/generateHTML')
 
 const teamArray = [];
 
@@ -102,3 +103,26 @@ const addEmployee = () => {
         }
     })
 };
+
+const writefile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log('Success!')
+        }
+    })
+};
+
+addManager()
+.then(addEmployee)
+.then(teamArray => {
+    return generateHTML(teamArray)
+})
+.then(pageHTML => {
+    return writefile (pageHTML);
+})
+.catch(err => {
+    console.log(err);
+});
