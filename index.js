@@ -75,7 +75,7 @@ const addEmployee = () => {
             type: 'input',
             name: 'school',
             message: 'Enter the interns school',
-            when: (input) => input.role === "Inter",
+            when: (input) => input.role === "Intern",
         },
         {
             type:'confirm',
