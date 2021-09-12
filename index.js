@@ -1,15 +1,15 @@
 const fs = require('fs')
 const inquirer = require("inquirer")
+const generateHTML = require('./src/generateHTML');
 
-const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const generateHTML = require('./src/generateHTML')
+
 
 const teamArray = [];
 
-// Manager questions
+
 const addManager = () => {
     return inquirer.prompt ([
         {
@@ -80,7 +80,7 @@ const addEmployee = () => {
         {
             type:'confirm',
             name:'confirmAddEmployee',
-            message:'I dont want to add anymore team members',
+            message:'Would you like to add more Team members?',
             default: false
         }
     ])
