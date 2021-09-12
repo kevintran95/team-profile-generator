@@ -13,7 +13,8 @@ The purpose of this program is to quickly generate a team portfolio using Node.J
 - https://drive.google.com/file/d/14NNbP1NNNMZAbHfgcEqBgrBKQGWfMDqQ/view
 - https://youtu.be/rsbQA1YwaKk
 ## Screenshot 
-<img width="2555" alt="Screen Shot 2021-09-11 at 9 02 26 PM" src="https://user-images.githubusercontent.com/87213793/132971721-5b5b1833-ee32-49e6-a71a-2438bd6c9e9b.png">
+<img width="2297" alt="Screen Shot 2021-09-11 at 9 22 33 PM" src="https://user-images.githubusercontent.com/87213793/132972089-04ff4716-8c5f-4cad-923b-45bdf5476dce.png">
+
 
 ## Test 
 - Use "node index.js"
