@@ -9,8 +9,10 @@ w3school.com
 Kevin Tran 
 
 ## Link
-
+https://drive.google.com/file/d/14NNbP1NNNMZAbHfgcEqBgrBKQGWfMDqQ/view
 ## Screenshot 
+<img width="2555" alt="Screen Shot 2021-09-11 at 9 02 26 PM" src="https://user-images.githubusercontent.com/87213793/132971721-5b5b1833-ee32-49e6-a71a-2438bd6c9e9b.png">
 
 ## Test 
+Use "node index.js"
 Use "npm run test"
